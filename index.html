@@ -16,11 +16,21 @@
     <!-- App Bar/Navigation -->
     <nav class="bg-blue-500 p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-white text-2xl font-semibold transition-transform transform hover:scale-105">Lochan maru</h1>
-            <ul class="flex space-x-4">
+            <h1 class="text-white text-2xl font-semibold transition-transform transform hover:scale-105">Lochan maru
+            </h1>
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="md:hidden block cursor-pointer">
+                <svg class="text-white fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </label>
+            <ul class="hidden md:flex md:space-x-4">
                 <li><a href="#home" class="text-white transition-transform transform hover:scale-110">Home</a></li>
 
                 <li><a href="#projects" class="text-white transition-transform transform hover:scale-110">Projects</a>
+                </li>
+                <li><a href="#about" class="text-white transition-transform transform hover:scale-110">About me</a>
                 </li>
                 <li><a href="#contact" class="text-white transition-transform transform hover:scale-110">Contact</a>
                 </li>
@@ -28,113 +38,180 @@
         </div>
     </nav>
 
-  <!-- Home Section -->
-<section id="home" class="h-screen flex items-center relative bg-gradient-to-r from-blue-500 to-indigo-500 text-white overflow-hidden">
-    <!-- Left Side Content -->
-    <div class="container mx-auto text-left z-10 w-full md:w-1/2 md:ml-0 md:order-first animate__animated animate__slideInLeft animate__delay-1s">
-        <h1 class="text-4xl font-extrabold leading-tight mb-4">Welcome to My Portfolio</h1>
-        <p class="text-lg">Greetings! I am a passionate software developer with a versatile skill set encompassing React and Flutter technologies. My joy lies in the art of building things from scratch, crafting digital solutions that bring ideas to life. I find immense satisfaction in the creative process of software development and the constant learning it entails.
+    <!-- Home Section -->
+    <section id="home"
+        class="h-screen flex flex-col md:flex-row items-center relative bg-gradient-to-r from-blue-500 to-indigo-500 text-white overflow-hidden">
+        <!-- Left Side Content -->
+        <div
+            class="container mx-auto text-center md:text-left z-10 w-full md:w-1/2 md:ml-0 md:order-first animate__animated animate__slideInLeft animate__delay-1s">
+            <h1 class="text-4xl font-extrabold leading-tight mb-4">Welcome to My Portfolio</h1>
+            <p class="text-lg">Greetings! I am a passionate software developer with a versatile skill set encompassing
+                React and Flutter technologies. My joy lies in the art of building things from scratch, crafting digital
+                solutions that bring ideas to life.
+            </p>
+            <a href="https://www.linkedin.com/in/lochan-maru/" target="_blank" rel="noopener noreferrer"
+                class="bg-blue-500 text-white px-4 py-2 mt-4 inline-block rounded-full hover:bg-blue-600 transition duration-300">Learn
+                More on LinkedIn</a>
+        </div>
 
-            Beyond the realm of coding, I have a keen interest and proficiency in trading and navigating the intricacies of the stock market. My analytical mindset finds harmony in the dynamic world of finance, and I enjoy staying informed about market trends and investment opportunities.
+        <div
+            class="hidden md:flex md:items-center absolute top-0 right-0 transform translate-y-1/2 -translate-y-16 animate__animated animate__slideInRight animate__delay-1s">
+            <img src="main.jpg" alt="Profile Image" class="object-cover h-100 w-100 rounded-full">
+            <!-- Adjust height and width as needed -->
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects"
+        class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-200 to-blue-300 overflow-hidden">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-8">Projects</h2>
 
-            In my free time, I indulge in a diverse set of hobbies. Whether it's the rhythm of music, the strategic moves in chess, the athleticism of cricket and table tennis, or the art of expressing through writing, I find inspiration and joy in various facets of life.
+            <!-- Project Container -->
+            <div id="project-container" class="grid grid-cols-1 items-center space-y-8">
+                <!-- Project 1 -->
+                <div id="project1"
+                    class="project-card p-6 border rounded-md shadow-md transform transition-transform animate__animated animate__fadeIn animate__delay-0.5s h-full">
+                    <h3 class="text-2xl font-semibold mb-2 text-blue-500">Hustle Fit</h3>
+                    <p class="text-gray-600 mb-4">Elevate your fitness journey with the Hustle Fit React Fitness App.
+                        Featuring over a thousand exercises, customizable categories, and precise muscle group
+                        targeting. Master React best practices, embrace UI design with Material UI (version 5), and
+                        seamlessly fetch data from diverse sources through RapidAPI integration. Unleash your coding
+                        potential and showcase your expertise with the Golds Gym React Fitness App – where
+                        professionalism meets innovation in a polished package. 🏋️💼 </p>
+                    <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                </div>
 
-            A true team player at heart, I thrive in collaborative environments, valuing the synergy that diverse perspectives bring. A natural problem solver, I approach challenges with curiosity and determination, always seeking innovative solutions.
+                <!-- Project 2 -->
+                <div id="project2"
+                    class="project-card p-6 border rounded-md shadow-md transform transition-transform animate__animated animate__fadeIn animate__delay-0.5s h-full hidden">
+                    <h3 class="text-2xl font-semibold mb-2 text-green-500">TikTok Clone</h3>
+                    <p class="text-gray-600 mb-4">Immerse yourself in my Flutter TikTok Clone – a sophisticated project
+                        showcasing:
 
-            Let's create, innovate, and solve challenges together! 🚀✨</p>
-        <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer" class="bg-blue-500 text-white px-4 py-2 mt-4 inline-block rounded-full hover:bg-blue-600 transition duration-300">Learn More on LinkedIn</a>
-    </div>
+                        ✅ Authentication (Email & Password)
+                        🎥 Video Upload with Caption
+                        🚀 Video Compression & Thumbnails
+                        📱 TikTok-like UI
+                        ❤️ Like & Comment Features
+                        🔍 User Search & Follow Functionality
+                        📊 User Insights (Followers, Following, Likes, Posts)
+                        Elevate your Flutter portfolio with this sleek TikTok-inspired app, showcasing proficiency in
+                        mobile app development. 📱💼</p>
+                    <a href="#" class="text-green-500 hover:underline">View Project</a>
+                </div>
 
-    <!-- Right Side Image -->
-    <div class="hidden md:block absolute top-0 right-0 h-full w-1/2 animate__animated animate__slideInRight animate__delay-1s">
-        <img src="main.jpg" alt="Profile Image" class="object-cover h-full w-full">
+                <!-- Project 3 -->
+                <div id="project3"
+                    class="project-card p-6 border rounded-md shadow-md transform transition-transform animate__animated animate__fadeIn animate__delay-0.5s h-full hidden">
+                    <h3 class="text-2xl font-semibold mb-2 text-purple-500">Flutter Zoom Clone</h3>
+                    <p class="text-gray-600 mb-4">Transform your virtual meetings with the Flutter Zoom Clone –
+                        featuring:
+
+                        🔐 Google Sign In
+                        📅 Create/Join Meetings
+                        🔇 Mute/Unmute Audio
+                        📹 Mute/Unmute Video
+                        👤 Change Display Name
+                        🙋 Raise Hand
+                        🖥️ Screen Sharing
+                        💬 Chat
+                        🎥 Live Stream
+                        📺 Picture in Picture
+                        🔲 Tile View
+                        📚 Meeting History
+                        🚪 Log Out
+                        Optimize your virtual collaboration effortlessly.</p>
+                    <a href="#" class="text-purple-500 hover:underline">View Project</a>
+                </div>
+            </div>
+
+            <!-- Arrow Button for Navigation -->
+            <div class="mt-8">
+                <button id="nextBtn" onclick="showNextProject()"
+                    class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <script>
+            let currentProject = 1;
+
+            function showNextProject() {
+                const currentProjectElement = document.getElementById(`project${currentProject}`);
+                currentProjectElement.classList.add('hidden');
+
+                currentProject = (currentProject % 3) + 1;
+
+                const nextProjectElement = document.getElementById(`project${currentProject}`);
+                nextProjectElement.classList.remove('hidden');
+            }
+        </script>
+    </section>
+
+
+<!-- About Me Section -->
+<section id="about" class="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-yellow-500 to-indigo-500 text-white">
+    <div id="about-content" class="container mx-auto text-center">
+        <h2 class="text-4xl font-extrabold mb-8">About Me</h2>
+        <p class="text-lg mb-6 animated-text">I'm passionate about technology and creativity. With expertise in software development, I enjoy solving challenges and bringing innovative ideas to life.</p>
+        <p class="text-lg mb-6 animated-text">My skills range from web development to mobile app development, utilizing technologies like React, Flutter, and more. I strive to create intuitive and visually appealing solutions.</p>
+        <p class="text-lg mb-6 animated-text">Beyond coding, I'm enthusiastic about design and animation, focusing on crafting immersive user experiences. Let's collaborate and turn your ideas into reality!</p>
     </div>
 </section>
 
-
-   <!-- Projects Section -->
-<section id="projects" class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-200 to-blue-300 overflow-hidden">
-    <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-extrabold mb-8">Projects</h2>
-
-        <!-- Project Container -->
-        <div id="project-container" class="grid grid-cols-1 items-center space-y-8">
-            <!-- Project 1 -->
-            <div id="project1" class="project-card p-6 border rounded-md shadow-md transform transition-transform animate__animated animate__fadeIn animate__delay-1s h-full">
-                <h3 class="text-2xl font-semibold mb-2 text-blue-500">Hustle Fit</h3>
-                <p class="text-gray-600 mb-4">Elevate your fitness journey with the Hustle Fit React Fitness App. Featuring over a thousand exercises, customizable categories, and precise muscle group targeting. Master React best practices, embrace UI design with Material UI (version 5), and seamlessly fetch data from diverse sources through RapidAPI integration. Unleash your coding potential and showcase your expertise with the Golds Gym React Fitness App – where professionalism meets innovation in a polished package. 🏋️💼 </p>
-                <a href="#" class="text-blue-500 hover:underline">View Project</a>
-            </div>
-
-            <!-- Project 2 -->
-            <div id="project2" class="project-card p-6 border rounded-md shadow-md transform transition-transform animate__animated animate__fadeIn animate__delay-2s h-full hidden">
-                <h3 class="text-2xl font-semibold mb-2 text-green-500">TikTok Clone</h3>
-                <p class="text-gray-600 mb-4">Immerse yourself in my Flutter TikTok Clone – a sophisticated project showcasing:
-
-                    ✅ Authentication (Email & Password)
-                    🎥 Video Upload with Caption
-                    🚀 Video Compression & Thumbnails
-                    📱 TikTok-like UI
-                    ❤️ Like & Comment Features
-                    🔍 User Search & Follow Functionality
-                    📊 User Insights (Followers, Following, Likes, Posts)
-                    Elevate your Flutter portfolio with this sleek TikTok-inspired app, showcasing proficiency in mobile app development. 📱💼</p>
-                <a href="#" class="text-green-500 hover:underline">View Project</a>
-            </div>
-
-            <!-- Project 3 -->
-            <div id="project3" class="project-card p-6 border rounded-md shadow-md transform transition-transform animate__animated animate__fadeIn animate__delay-3s h-full hidden">
-                <h3 class="text-2xl font-semibold mb-2 text-purple-500">Flutter Zoom Clone</h3>
-                <p class="text-gray-600 mb-4">Transform your virtual meetings with the Flutter Zoom Clone – featuring:
-
-                    🔐 Google Sign In
-                    📅 Create/Join Meetings
-                    🔇 Mute/Unmute Audio
-                    📹 Mute/Unmute Video
-                    👤 Change Display Name
-                    🙋 Raise Hand
-                    🖥️ Screen Sharing
-                    💬 Chat
-                    🎥 Live Stream
-                    📺 Picture in Picture
-                    🔲 Tile View
-                    📚 Meeting History
-                    🚪 Log Out
-                    Optimize your virtual collaboration effortlessly.</p>
-                <a href="#" class="text-purple-500 hover:underline">View Project</a>
-            </div>
-        </div>
-
-        <!-- Arrow Button for Navigation -->
-        <div class="mt-8">
-            <button id="nextBtn" onclick="showNextProject()" class="text-gray-500 hover:text-gray-700 focus:outline-none">
-                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-
-    <script>
-        let currentProject = 1;
-
-        function showNextProject() {
-            const currentProjectElement = document.getElementById(`project${currentProject}`);
-            currentProjectElement.classList.add('hidden');
-
-            currentProject = (currentProject % 3) + 1;
-
-            const nextProjectElement = document.getElementById(`project${currentProject}`);
-            nextProjectElement.classList.remove('hidden');
+<!-- Add CSS styles for animations -->
+<style>
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
         }
-    </script>
-</section>
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animated-text {
+        opacity: 0;
+        animation: fadeInUp 0.5s ease forwards;
+    }
+
+    /* Adjust delay for each paragraph */
+    .animated-text:nth-child(1) {
+        animation-delay: 0.5s;
+    }
+    .animated-text:nth-child(2) {
+        animation-delay: 1s;
+    }
+    .animated-text:nth-child(3) {
+        animation-delay: 1.5s;
+    }
+</style>
+
+<script>
+    // Function to trigger animation when About Me section is visited
+    function animateText() {
+        const textElements = document.querySelectorAll('.animated-text');
+        textElements.forEach((element) => {
+            // Remove and re-add the animated class to trigger animation every time
+            element.classList.remove('animated');
+            setTimeout(() => {
+                element.classList.add('animated');
+            }, 100);
+        });
+    }
+
+    // Add event listener to trigger animation when About Me section is visited
+    window.addEventListener('load', animateText);
+</script>
 
 
 
-
-
-    >
 
 
     <!-- Contact Section -->
@@ -147,22 +224,23 @@
             <form id="contactForm" class="space-y-4">
                 <div>
                     <label for="name" class="block text-gray-800 text-sm font-semibold mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="w-full p-3 border rounded-md" required>
+                    <input type="text" style="color: black;" id="name" name="name" class="w-full p-3 border rounded-md"
+                        required>
                 </div>
 
                 <div>
                     <label for="email" class="block text-gray-800 text-sm font-semibold mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="w-full p-3 border rounded-md" required>
+                    <input type="email" style="color: black;" id="email" name="email" class="w-full p-3 border rounded-md" required>
                 </div>
 
                 <div>
                     <label for="subject" class="block text-gray-800 text-sm font-semibold mb-2">Subject</label>
-                    <input type="text" id="subject" name="subject" class="w-full p-3 border rounded-md" required>
+                    <input type="text"  style="color: black;"id="subject" name="subject" class="w-full p-3 border rounded-md" required>
                 </div>
 
                 <div>
                     <label for="message" class="block text-gray-800 text-sm font-semibold mb-2">Message</label>
-                    <textarea id="message" name="message" rows="4" class="w-full p-3 border rounded-md"
+                    <textarea id="message" style="color: black;" name="message" rows="4" class="w-full p-3 border rounded-md"
                         required></textarea>
                 </div>
 
